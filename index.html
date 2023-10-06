@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+
+    <!-- Main CSS File  -->
+    <link rel="stylesheet" href="./master.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>The Snake</h1>
+        </header>
+        <main>
+            <div class="canvas-wrapper">
+                <div class="info">
+                    <span>Score <span class="score">0</span></span>
+                    <div class="fruits">
+                        <div class="fruit">
+                            <img id="cherries" src="./images/cherries.png" alt="cherries">
+                            <span class="molt-rate">6</span>
+                        </div>
+                        <div class="fruit">
+                            <img id="apple" src="./images/apple.png" alt="apple">
+                            <span class="molt-rate">2</span>
+                        </div>
+                        <div class="fruit">
+                            <img id="grapes" src="./images/grapes.png" alt="grapes">
+                            <span class="molt-rate">3</span>
+                        </div>
+
+                    </div>
+                </div>
+                <canvas id="canvas" width="600" height="600"></canvas>
+            </div>
+            <button id="restartBtn">Restart Game</button>
+        </main>
+    </div>
+
+
+    <script src="./js/index.js" type="module"></script>
+    <script src="./js/snake.js" type="module"></script>
+</body>
+
+</html>

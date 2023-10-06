@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+
+/* Start Global Variables  */
+:root {
+    --body-bg-color: #000000;
+    --board-bg-color: #010f5a;
+    --red-color: #E64848;
+    --green-color: #7DCE13;
+}
+
+/* End Global Variables  */
+
+
+/* Start Global Rules  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--body-bg-color);
+    font-family: 'Rubik Bubbles', cursive;
+}
+
+
+header {
+    padding: 10px;
+    text-align: center;
+}
+
+
+header h1 {
+    color: var(--green-color);
+    font-size: 80px;
+    letter-spacing: 5px;
+}
+
+header h1.game-over {
+    color: var(--red-color);
+}
+
+header h1.player-won {
+    color: var(--green-color);
+}
+
+main {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+#restartBtn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    font-size: 20px;
+    border: 3px solid var(--red-color);
+    border-radius: 6px;
+    background-color: var(--red-color);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .3s;
+    display: none;
+}
+
+#restartBtn:hover {
+    background-color: var(--board-bg-color);
+    color: var(--green-color);
+}
+
+
+
+.canvas-wrapper {
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.canvas-wrapper .info {
+    padding: 18px 0;
+    font-size: 18px;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.canvas-wrapper .info>span {
+    background-color: var(--board-bg-color);
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.canvas-wrapper .info>span>span {
+    background-color: var(--body-bg-color);
+    padding: 3px 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    border-radius: 6px;
+}
+
+.canvas-wrapper .info .fruits {
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: #fff;
+    font-family: cursive;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--board-bg-color);
+}
+
+.canvas-wrapper .info .fruits .fruit {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.canvas-wrapper .info .fruits img {
+    width: 20px;
+}
+
+#canvas {
+    background-color: var(--board-bg-color);
+}
+
+#canvas.game-over {
+    background-color: var(--red-color);
+}
+
+#canvas.player-won {
+    background-color: var(--green-color);
+}
+
+
+
+#food {
+    display: none;
+}
+
+/* End Global Rules  */
