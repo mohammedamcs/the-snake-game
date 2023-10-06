@@ -5,6 +5,7 @@ export const canvas = document.getElementById("canvas");
 export const ctx = canvas.getContext("2d");
 const heading = document.querySelector("header h1");
 const restartBtn = document.getElementById("restartBtn");
+export const score = document.querySelector(".score");
 
 // Globals
 const FBS = 8;
@@ -79,6 +80,8 @@ function resetGame() {
   heading.classList.remove("game-over");
   // Hiding restartBtn
   restartBtn.style.display = "none";
+  // Resetting score
+  score.innerHTML = 0;
   // Re-run the game
   update();
 }

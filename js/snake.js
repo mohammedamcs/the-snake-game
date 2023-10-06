@@ -1,5 +1,4 @@
-import { canvas, ctx, playAudio } from "./index.js";
-const score = document.querySelector(".score");
+import { canvas, ctx, playAudio,score } from "./index.js";
 // Globals
 const SEGMENT_SIZE = 20;
 const SNAKE_COLOR = "#7DCE13";
